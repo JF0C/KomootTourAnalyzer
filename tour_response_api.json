@@ -1,0 +1,248 @@
+{
+    "_embedded": {
+        "tours": [
+            {
+                "status": "private",
+                "type": "tour_recorded",
+                "date": "2023-08-14T12:20:03.865Z",
+                "name": "Tour",
+                "source": "{\\"
+                api\\":\\"de.komoot.main-api/tour/recorded\\",\\"type\\":\\"tour_recorded\\",\\"id\\":1259959282}",
+                "distance": 13450.011061417283,
+                "duration": 3080,
+                "sport": "racebike",
+                "_links": {
+                    "creator": { "href": "http://api.komoot.de/v007/users/1744000955488/profile_embedded" },
+                    "self": { "href": "http://api.komoot.de/v007/tours/1259959282" },
+                    "coordinates": { "href": "http://api.komoot.de/v007/tours/1259959282/coordinates" },
+                    "participants": { "href": "http://api.komoot.de/v007/tours/1259959282/participants/" },
+                    "timeline": { "href": "http://api.komoot.de/v007/tours/1259959282/timeline/" },
+                    "translations": { "href": "http://api.komoot.de/v007/tours/1259959282/translations" },
+                    "cover_images": { "href": "http://api.komoot.de/v007/tours/1259959282/cover_images/" }
+                },
+                "kcal_active": 0,
+                "kcal_resting": 0,
+                "start_point": {
+                    "lat": 48.213054,
+                    "lng": 11.511112,
+                    "alt": 495.7
+                },
+                "elevation_up": 52.91592987661505,
+                "elevation_down": 27.352898727223135,
+                "time_in_motion": 2640,
+                "_embedded": {
+                    "creator": {
+                        "username": "1744000955488",
+                        "avatar": {
+                            "src": "https://d2exd72xrrp1s7.cloudfront.net/www/15/15s7k1d0rg8qcnjkyuu5nt0vr3wz578r3-u1744000955488-full/17c09b74c4c?width={width}&height={height}&crop={crop}",
+                            "templated": true,
+                            "type": "image/*"
+                        },
+                        "status": "public",
+                        "_links": {
+                            "self": { "href": "http://api.komoot.de/v007/users/1744000955488/profile_embedded" },
+                            "relation": {
+                                "href": "http://api.komoot.de/v007/users/{username}/relations/1744000955488",
+                                "templated": true
+                            }
+                        },
+                        "display_name": "Jan Chen",
+                        "is_premium": false
+                    }
+                },
+                "id": 1259959282,
+                "changed_at": "2023-08-14T13:12:29.534Z",
+                "vector_map_image": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/big/etl%5Cmy_FATZD%60As@lCpI%7C@u@PqB%3Fr@TmBr@iBpCKPXz@Bj@%5BKI%5Eg@n@h@lCp@j@yBhBeB%7C@K%3FaAp@gBlAs@XoAR@~AyKhA%5CL_AZF/",
+                    "templated": false,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                },
+                "vector_map_image_preview": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/small/etl%5Cmy_FATZD%60As@lCpI%7C@u@PqB%3Fr@TmBr@iBpCKPXz@Bj@%5BKI%5Eg@n@h@lCp@j@yBhBeB%7C@K%3FaAp@gBlAs@XoAR@~AyKhA%5CL_AZF/",
+                    "templated": false,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                },
+                "potential_route_update": false,
+                "map_image": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/big/etl%5Cmy_FATZD%60As@lCpI%7C@u@PqB%3Fr@TmBr@iBpCKPXz@Bj@%5BKI%5Eg@n@h@lCp@j@yBhBeB%7C@K%3FaAp@gBlAs@XoAR@~AyKhA%5CL_AZF/?width={width}&height={height}&crop={crop}",
+                    "templated": true,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                },
+                "map_image_preview": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/small/etl%5Cmy_FATZD%60As@lCpI%7C@u@PqB%3Fr@TmBr@iBpCKPXz@Bj@%5BKI%5Eg@n@h@lCp@j@yBhBeB%7C@K%3FaAp@gBlAs@XoAR@~AyKhA%5CL_AZF/?width={width}&height={height}&crop={crop}",
+                    "templated": true,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                }
+            },
+            {
+                "status": "private",
+                "type": "tour_recorded",
+                "date": "2023-08-13T17:28:20.998Z",
+                "name": "Rennrad-Tour",
+                "source": "{\\"
+                api\\":\\"de.komoot.main-api/tour/recorded\\",\\"type\\":\\"tour_recorded\\",\\"id\\":1258826267}",
+                "distance": 14722.179389493314,
+                "duration": 1845,
+                "sport": "racebike",
+                "_links": {
+                    "creator": { "href": "http://api.komoot.de/v007/users/1744000955488/profile_embedded" },
+                    "self": { "href": "http://api.komoot.de/v007/tours/1258826267" },
+                    "coordinates": { "href": "http://api.komoot.de/v007/tours/1258826267/coordinates" },
+                    "participants": { "href": "http://api.komoot.de/v007/tours/1258826267/participants/" },
+                    "timeline": { "href": "http://api.komoot.de/v007/tours/1258826267/timeline/" },
+                    "translations": { "href": "http://api.komoot.de/v007/tours/1258826267/translations" },
+                    "cover_images": { "href": "http://api.komoot.de/v007/tours/1258826267/cover_images/" }
+                },
+                "kcal_active": 0,
+                "kcal_resting": 0,
+                "start_point": {
+                    "lat": 48.209407,
+                    "lng": 11.360332,
+                    "alt": 504.8
+                },
+                "elevation_up": 40.07131897124941,
+                "elevation_down": 33.59289599767823,
+                "time_in_motion": 1801,
+                "_embedded": {
+                    "creator": {
+                        "username": "1744000955488",
+                        "avatar": {
+                            "src": "https://d2exd72xrrp1s7.cloudfront.net/www/15/15s7k1d0rg8qcnjkyuu5nt0vr3wz578r3-u1744000955488-full/17c09b74c4c?width={width}&height={height}&crop={crop}",
+                            "templated": true,
+                            "type": "image/*"
+                        },
+                        "status": "public",
+                        "_links": {
+                            "self": { "href": "http://api.komoot.de/v007/users/1744000955488/profile_embedded" },
+                            "relation": {
+                                "href": "http://api.komoot.de/v007/users/{username}/relations/1744000955488",
+                                "templated": true
+                            }
+                        },
+                        "display_name": "Jan Chen",
+                        "is_premium": false
+                    }
+                },
+                "id": 1258826267,
+                "changed_at": "2023-08-13T17:59:12.066Z",
+                "vector_map_image": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/big/%7Bql%5Ce%7B%7CEpAaAdB%5D%7CC%7DGMQh@cDXHv@qAP%7DAv@Dz@iBOcAXKEuIf@iAdAo@GuEQmAh@iBaAkG_BPOyExAaMW%5Be@wD%5Di@/",
+                    "templated": false,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                },
+                "vector_map_image_preview": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/small/%7Bql%5Ce%7B%7CEpAaAdB%5D%7CC%7DGMQh@cDXHv@qAP%7DAv@Dz@iBOcAXKEuIf@iAdAo@GuEQmAh@iBaAkG_BPOyExAaMW%5Be@wD%5Di@/",
+                    "templated": false,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                },
+                "potential_route_update": false,
+                "map_image": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/big/%7Bql%5Ce%7B%7CEpAaAdB%5D%7CC%7DGMQh@cDXHv@qAP%7DAv@Dz@iBOcAXKEuIf@iAdAo@GuEQmAh@iBaAkG_BPOyExAaMW%5Be@wD%5Di@/?width={width}&height={height}&crop={crop}",
+                    "templated": true,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                },
+                "map_image_preview": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/small/%7Bql%5Ce%7B%7CEpAaAdB%5D%7CC%7DGMQh@cDXHv@qAP%7DAv@Dz@iBOcAXKEuIf@iAdAo@GuEQmAh@iBaAkG_BPOyExAaMW%5Be@wD%5Di@/?width={width}&height={height}&crop={crop}",
+                    "templated": true,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                }
+            },
+            {
+                "status": "private",
+                "type": "tour_recorded",
+                "date": "2023-08-13T14:24:47.999Z",
+                "name": "Rennrad-Tour",
+                "source": "{\\"
+                api\\":\\"de.komoot.main-api/tour/recorded\\",\\"type\\":\\"tour_recorded\\",\\"id\\":1258388760}",
+                "distance": 14591.449813720455,
+                "duration": 1822,
+                "sport": "racebike",
+                "_links": {
+                    "creator": { "href": "http://api.komoot.de/v007/users/1744000955488/profile_embedded" },
+                    "self": { "href": "http://api.komoot.de/v007/tours/1258388760" },
+                    "coordinates": { "href": "http://api.komoot.de/v007/tours/1258388760/coordinates" },
+                    "participants": { "href": "http://api.komoot.de/v007/tours/1258388760/participants/" },
+                    "timeline": { "href": "http://api.komoot.de/v007/tours/1258388760/timeline/" },
+                    "translations": { "href": "http://api.komoot.de/v007/tours/1258388760/translations" },
+                    "cover_images": { "href": "http://api.komoot.de/v007/tours/1258388760/cover_images/" }
+                },
+                "kcal_active": 0,
+                "kcal_resting": 0,
+                "start_point": {
+                    "lat": 48.180784,
+                    "lng": 11.512876,
+                    "alt": 507.3
+                },
+                "elevation_up": 38.82523669266669,
+                "elevation_down": 43.38802002005502,
+                "time_in_motion": 1822,
+                "_embedded": {
+                    "creator": {
+                        "username": "1744000955488",
+                        "avatar": {
+                            "src": "https://d2exd72xrrp1s7.cloudfront.net/www/15/15s7k1d0rg8qcnjkyuu5nt0vr3wz578r3-u1744000955488-full/17c09b74c4c?width={width}&height={height}&crop={crop}",
+                            "templated": true,
+                            "type": "image/*"
+                        },
+                        "status": "public",
+                        "_links": {
+                            "self": { "href": "http://api.komoot.de/v007/users/1744000955488/profile_embedded" },
+                            "relation": {
+                                "href": "http://api.komoot.de/v007/users/{username}/relations/1744000955488",
+                                "templated": true
+                            }
+                        },
+                        "display_name": "Jan Chen",
+                        "is_premium": false
+                    }
+                },
+                "id": 1258388760,
+                "changed_at": "2023-08-13T14:55:14.983Z",
+                "vector_map_image": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/big/_%60l%5Cqz_Fm@%60Bd@p@f@%7CDRV%5BdC%5CxCJ%7CHjAxHg@nB%60@zGYrH%7BAfEBvCUhAoFtKaAWaCjGo@oAiBpA/",
+                    "templated": false,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                },
+                "vector_map_image_preview": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/small/_%60l%5Cqz_Fm@%60Bd@p@f@%7CDRV%5BdC%5CxCJ%7CHjAxHg@nB%60@zGYrH%7BAfEBvCUhAoFtKaAWaCjGo@oAiBpA/",
+                    "templated": false,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                },
+                "potential_route_update": false,
+                "map_image": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/big/_%60l%5Cqz_Fm@%60Bd@p@f@%7CDRV%5BdC%5CxCJ%7CHjAxHg@nB%60@zGYrH%7BAfEBvCUhAoFtKaAWaCjGo@oAiBpA/?width={width}&height={height}&crop={crop}",
+                    "templated": true,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                },
+                "map_image_preview": {
+                    "src": "https://tourpic-vector.maps.komoot.net/r/small/_%60l%5Cqz_Fm@%60Bd@p@f@%7CDRV%5BdC%5CxCJ%7CHjAxHg@nB%60@zGYrH%7BAfEBvCUhAoFtKaAWaCjGo@oAiBpA/?width={width}&height={height}&crop={crop}",
+                    "templated": true,
+                    "type": "image/*",
+                    "attribution": "Map data © OpenStreetMap contributors"
+                }
+            }
+        ]
+    },
+    "_links": {
+        "prev": { "href": "http://api.komoot.de/v007/users/1744000955488/tours/?sort_field=date&type=tour_recorded&sort_direction=desc&page=1&limit=3" },
+        "self": { "href": "http://api.komoot.de/v007/users/1744000955488/tours/?sort_field=date&type=tour_recorded&sort_direction=desc&page=2&limit=3" },
+        "next": { "href": "http://api.komoot.de/v007/users/1744000955488/tours/?sort_field=date&type=tour_recorded&sort_direction=desc&page=3&limit=3" }
+    },
+    "page": {
+        "size": 3,
+        "totalElements": 839,
+        "totalPages": 280,
+        "number": 2
+    }
+}
