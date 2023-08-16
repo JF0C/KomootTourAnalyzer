@@ -2,7 +2,7 @@
 using KomootTourAnalyzer.Services;
 using Microsoft.Extensions.Configuration;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Starting Tour Analyzer");
 
 var config = ReadConfig();
 var auth = new AuthenticationService(config);
