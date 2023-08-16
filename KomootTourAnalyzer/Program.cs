@@ -12,6 +12,9 @@ var tourService = new TourLoaderService(auth.Cookies, config);
 //var tours = await tourService.GetToursPaged(3, 0);
 //Console.WriteLine(tours);
 var summary = await tourService.GetSummarizedData(Console.WriteLine);
+Console.WriteLine($"Total distance [km]:       " + (summary?.DistanceInMeters ?? 0 / 1000.0).ToString("0.00"));
+Console.WriteLine($"Total elevation up [km]:   " + (summary?.ElevationUpInMeters ?? 0 / 1000.0).ToString("0.00"));
+Console.WriteLine($"Total elevation down [km]: " + (summary?.ElevationDownInMeters ?? 0 / 1000.0).ToString("0.00"));
 Console.ReadLine();
 
 static IConfiguration ReadConfig()
