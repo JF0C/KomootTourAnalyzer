@@ -8,20 +8,20 @@ namespace KomootTourAnalyzer.Services
 {
 	public class TourLoaderService
 	{
-		private readonly CookieContainer _cookies;
+		private readonly AuthenticationService _authService;
 		private readonly IConfiguration _config;
-		public TourLoaderService(CookieContainer cookies, IConfiguration config)
+		public TourLoaderService(AuthenticationService authService, IConfiguration config)
 		{
-			_cookies = cookies;
+			_authService = authService;
 			_config = config;
 		}
 
 		public async Task<TourResponseDto?> GetToursPaged(int size, int page)
 		{
-            using var handler = new HttpClientHandler() { CookieContainer = _cookies };
-            using var client = new HttpClient(handler) { BaseAddress = new Uri(_config["KomootApiUrl"]) };
-            var userid = _config["KomootUserId"] ?? throw new ArgumentNullException("appsettings:KomootUserId");
-            var query = "users/" + userid + "/tours/?sort_field=date&type=tour_recorded&sort_direction=desc&page=" + page + "&limit=" + size;
+            using var handler = new HttpClientHandler() { CookieContainer = _authService.Cookies };
+            var url = _config["KomootApiUrl"] ?? throw new KeyNotFoundException("KomootApiUrl is required");
+            using var client = new HttpClient(handler) { BaseAddress = new Uri(url) };
+            var query = "users/" + _authService.UserId + "/tours/?sort_field=date&type=tour_recorded&sort_direction=desc&page=" + page + "&limit=" + size;
             var message = new HttpRequestMessage(HttpMethod.Get, query);
             message.Headers.Add("onlyprops", "true");
             var response = await client.SendAsync(message);
