@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Text.Json;
+using KomootTourAnalyzer.Data;
 using KomootTourAnalyzer.DTOs;
 using Microsoft.Extensions.Configuration;
 
@@ -29,7 +30,7 @@ namespace KomootTourAnalyzer.Services
 			return JsonSerializer.Deserialize<TourResponseDto>(content);
 		}
 
-		public async Task<TourDto?> GetSummarizedData(Action<string> statusUpdate)
+		public async Task<TourSummary?> GetSummarizedData(Action<string> statusUpdate)
 		{
 			var tours = new List<TourDto>();
             var page = 0;
@@ -43,13 +44,15 @@ namespace KomootTourAnalyzer.Services
                 statusUpdate.Invoke($"Got {tours.Count} of {nTotalTours} tours");
             }
             while (tours.Count < nTotalTours);
-            var result = tours.Aggregate(new TourDto(), (s, e) =>
+            var result = tours.Aggregate(new TourSummary() { Date = DateTime.MaxValue, EndDate = DateTime.MinValue}, (s, e) =>
             {
                 s.DistanceInMeters += e.DistanceInMeters;
                 s.ElevationUpInMeters += e.ElevationUpInMeters;
                 s.ElevationDownInMeters += e.ElevationDownInMeters;
                 s.SecondsInMotion += e.SecondsInMotion;
                 s.SecondsTotal += e.SecondsTotal;
+                s.Date = s.Date > e.Date ? e.Date : s.Date;
+                s.EndDate = s.EndDate < e.Date ? e.Date : s.EndDate;
                 return s;
             });
             return result;

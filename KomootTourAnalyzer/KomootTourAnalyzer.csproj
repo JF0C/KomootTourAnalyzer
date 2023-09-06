@@ -11,10 +11,12 @@
     <None Remove="Services\" />
     <None Remove="DTOs\" />
     <None Remove="appsettings.json" />
+    <None Remove="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="DTOs\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
