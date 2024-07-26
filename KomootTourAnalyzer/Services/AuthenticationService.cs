@@ -1,15 +1,20 @@
 ﻿using System.Net;
 using System.Net.Http.Json;
+using System.Text;
+using System.Text.Json;
+using KomootTourAnalyzer.DTOs;
 using Microsoft.Extensions.Configuration;
 
 namespace KomootTourAnalyzer.Services
 {
-	public class AuthenticationService
+	public class AuthenticationService : IAuthenticationService
 	{
 		private readonly HttpClient _client;
 		private readonly CookieContainer _cookieContainer = new();
 		private readonly HttpClientHandler _handler;
 		private readonly IConfiguration _config;
+		private LoginResponseDto? loginResponse;
+		private string? authValue;
 
 		public AuthenticationService(IConfiguration configuration)
 		{
@@ -19,29 +24,36 @@ namespace KomootTourAnalyzer.Services
 			_client = new HttpClient(_handler) { BaseAddress = new Uri(komootUrl) };
 		}
 
-		public async Task<string> Login()
+		public async Task<LoginResponseDto?> Login()
 		{
-			_ = await _client.GetAsync("");
-			var request = new HttpRequestMessage(HttpMethod.Post, "v1/signin");
+			var client = new HttpClient()
+			{
+				BaseAddress = new Uri("https://api.komoot.de")
+			};
+			var request = new HttpRequestMessage(HttpMethod.Get, "v006/account/email/" + _config["KomootUsername"] + "/");
+
 			var email = _config["KomootUsername"] ?? throw new KeyNotFoundException("KomootUsername is required");
 			var password = _config["KomootPassword"] ?? throw new KeyNotFoundException("KomootPassword is required");
-			request.Content = JsonContent.Create(new { email, password, reason = (string?)null });
-			var response = await _client.SendAsync(request);
-			_ = await _client.GetAsync("actions/transfer?type=signin");
-			return await response.Content.ReadAsStringAsync();
+			string authValue = Convert.ToBase64String(Encoding.ASCII.GetBytes(email + ":" + password));
+			request.Headers.Add("Authorization", "Basic " + authValue); 
+
+			var response = await client.SendAsync(request);
+			var content = await response.Content.ReadAsStringAsync();
+			return JsonSerializer.Deserialize<LoginResponseDto>(content);
 		}
 
-		public CookieContainer Cookies => _cookieContainer;
-		public string UserId
+		public async Task AddAuthHeader(HttpRequestMessage message)
 		{
-			get
-			{
-                var koa_value = (_cookieContainer.GetAllCookies().FirstOrDefault(c => c.Name == "koa_rt")?.Value)
-					?? throw new KeyNotFoundException("Cookie koa_rt was not found. Try to login first.");
-                return koa_value[0..koa_value.IndexOf("%")];
-            }
+			loginResponse ??= await Login() ?? throw new Exception("Login failed");
+			authValue ??= "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes(loginResponse.Username + ":" + loginResponse.Password));
+			message.Headers.Add("Authorization", authValue);
 		}
-			
+
+		public async Task<string> GetUserId()
+		{
+			loginResponse ??= await Login() ?? throw new Exception("Login failed");
+			return loginResponse.Username;
+		}
 	}
 }
 
