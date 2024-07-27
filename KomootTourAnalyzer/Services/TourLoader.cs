@@ -49,6 +49,6 @@ public class TourLoader : BaseLoggingService, ITourLoader
             }
             while (tours.Count < nTotalTours);
         }
-        return tours;
+        return tours.OrderBy(t => t.Date);
     }
 }
