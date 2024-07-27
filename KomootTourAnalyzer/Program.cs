@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using KomootTourAnalyzer;
-using KomootTourAnalyzer.Services;
+﻿using KomootTourAnalyzer;
 using Microsoft.Extensions.Configuration;
 
 Console.WriteLine("Starting Tour Analyzer");
