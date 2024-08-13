@@ -63,7 +63,7 @@ public class TourAnalyzer : BaseLoggingService, ITourAnalyzer
         var timeInMotionH = (tourSummary?.SecondsInMotion ?? 1) / 3600.0;
         logger(TimePrefix() + "Total distance [km]:         " + distanceKm.ToString("0.00"));
         logger(TimePrefix() + "Total elevation up [km]:     " + (tourSummary?.ElevationUpInMeters / 1000.0 ?? 0).ToString("0.00"));
-        logger(TimePrefix() + "Total elevation down [km]:   " + distanceKm.ToString("0.00"));
+        logger(TimePrefix() + "Total elevation down [km]:   " + (tourSummary?.ElevationDownInMeters / 1000.0 ?? 0).ToString("0.00"));
         logger(TimePrefix() + "Total time in motion:        " + TimeSpan.FromSeconds(tourSummary?.SecondsInMotion ?? 0));
         logger(TimePrefix() + "Average velocity [km/h]:     " + (distanceKm / timeInMotionH).ToString("0.00"));
         logger(TimePrefix() + "First Tour [day.month.year]: " + tourSummary?.Date.ToString("dd.MM.yyyy") ?? "error");
